@@ -522,6 +522,15 @@ def site_search(update: Update, context: CallbackContext, site: str):
         
         result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animeacedemy</code>: \n"
         for entry in search_result:
+                 
+           if entry.text.strip() == "Nothing Found":
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>"
+                more_results = False
+                break
+                
+           post_link = entry.a['href']
+           post_name = html.escape(entry.text.strip())
+           result += f"• <a href='{post_link}'>{post_name}</a>\n"
 
     elif site == "kayo":
         search_url = f"https://animekayo.com/?s={search_query}"
