@@ -50,11 +50,18 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot.
-Build by weebs for weebs, I specialize in managing anime and similar themed groups.
-You can find my list of available commands with /help.
+def send_start(bot, update):
+    #Try to remove old message
+    try:
+        query = update.callback_query
+        query.message.delete()
+    except:
+        pass
+    chat = update.effective_chat  # type: Optional[Chat]
+    text = "Heya there, my name is Tanjiro Kamado(鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)! "
+    text += "\nI'm the eldest child in my family. I am a demon slayer who hunts demons. I became demon slayer only to convert my sister Nezuko back to human... Add me in ur grp to manage your grp. Use /help for knowing my commands..."
+    text += "\n\nI Travel with my 2 friends Inosuke Harshibra and Zenitsu Agatsuma. Our work to kill bad demons and and make this world demon free. U will use me anytime anywhere I will be happy only by helping you!!!"  
+    
 """
 
 HELP_STRINGS = """
@@ -77,7 +84,7 @@ And the following:
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-SAITAMA_IMG = "https://telegra.ph/file/46e6d9dfcb3eb9eae95d9.jpg"
+SAITAMA_IMG = "https://telegra.ph/file/27af4c96f012a3bb176a7.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 Saitama is hosted on one of Kaizoku's Servers and doesn't require any donations as of now but \
@@ -200,7 +207,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="☑️ Add Saitama to your group",
+                            text="☑️ Add Tanjiro to your group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
