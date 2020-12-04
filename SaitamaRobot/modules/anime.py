@@ -588,6 +588,24 @@ def site_search(update: Update, context: CallbackContext, site: str):
             post_name = html.escape(entry.text.strip())
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
 
+    elif site == "atf":
+        search_url = f"https://animesubingteam.000webhostapp.com/?s={search_query}"
+        html_text = requests.get(search_url).text
+        soup = bs4.BeautifulSoup(html_text, "html.parser")
+        search_result = soup.find_all("h2", {'class': "title"})
+
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeSubbingTeam</code>: \n"
+        for entry in search_result:
+
+            if entry.text.strip() == "Nothing Found":
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>ATF</code>"
+                more_results = False
+                break
+
+            post_link = entry.a['href']
+            post_name = html.escape(entry.text.strip())
+            result += f"• <a href='{post_link}'>{post_name}</a>\n"
+
     buttons = [[InlineKeyboardButton("See all results", url=search_url)]]
 
     if more_results:
@@ -638,6 +656,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/aat <anime>`*:* search an anime on animeacademy.in
  • `/hsa <anime>`*:* search an anime on hindianime.net
  • `/ast <anime>`*:* search an anime on animesubingteam.000webhostapp.com
+ • `/atf <anime>`*:* search an anime on animesubingteam.000webhostapp.com
  • `/airing <anime>`*:* returns anime airing info.
 
  """
