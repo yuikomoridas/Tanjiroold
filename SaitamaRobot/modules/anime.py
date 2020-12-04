@@ -671,10 +671,10 @@ dispatcher.add_handler(UPCOMING_HANDLER)
 __mod_name__ = "Anime"
 __command_list__ = [
     "anime", "manga", "character", "user", "upcoming", "kaizoku", "airing",
-    "kayo" "animespot", "animetm", "coolsanime",
+    "kayo" "animeacedemy", "animetm", "coolsanime",
 ]
 __handlers__ = [
     ANIME_HANDLER, CHARACTER_HANDLER, MANGA_HANDLER, USER_HANDLER,
     UPCOMING_HANDLER, KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER,
-     ANIMESPOT_SEARCH_HANDLER,  ANIMETM_SEARCH_HANDLER,  COOLSANIME_SEARCH_HANDLER,  BUTTON_HANDLER, AIRING_HANDLER
+     ANIMEACEDEMY_SEARCH_HANDLER,  ANIMETM_SEARCH_HANDLER,  COOLSANIME_SEARCH_HANDLER,  BUTTON_HANDLER, AIRING_HANDLER
 ]
