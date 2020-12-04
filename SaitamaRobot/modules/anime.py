@@ -14,7 +14,7 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
 kayo_btn = "Kayo 🏴‍☠️"
-animespot_btn = "Animespot ☠️"
+animeacedemy_btn = "AnimeAcedemy ☠️"
 animetm_btn = "Animetm ☠️"
 coolsanime_btn = "coolsanime ☠️"
 prequel_btn = "⬅️ Prequel"
@@ -534,17 +534,17 @@ def site_search(update: Update, context: CallbackContext, site: str):
             post_name = html.escape(entry.text.strip())
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
             
-    elif site == "animespot":
-        search_url = f"https://dubspotteam.blogspot.com/?q={search_query}"
+    elif site == "animeacedemy":
+        search_url = f"https://animeacedemy.in/?q={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"}) 
         
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animespotdubber</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animeacedemydubber</code>: \n"
         for entry in search_result:
                  
            if entry.text.strip() == "Nothing Found":
-                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeSpot</code>"
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeAcedemy</code>"
                 more_results = False
                 break
                 
@@ -611,8 +611,8 @@ def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
     
 @run_async
-def animespot(update: Update, context: CallbackContext):
-    site_search(update, context, "animespot")
+def animeacedemy(update: Update, context: CallbackContext):
+    site_search(update, context, "animeacedemy")
    
 @run_async
 def animetm(update: Update, context: CallbackContext):
@@ -635,7 +635,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/upcoming`*:* returns a list of new anime in the upcoming seasons.
  • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
  • `/kayo <anime>`*:* search an anime on animekayo.com
- • `/animespot <anime>`*:* search an anime on dubspotteam.blogspot.com
+ • `/animeacedemy <anime>`*:* search an anime on animeacedemy.in
  • `/animetm <anime>`*:* search an anime on animetmdubbers.in
  • `/coolsanime <anime>`*:* search an anime on coolsanime.org
  • `/airing <anime>`*:* returns anime airing info.
