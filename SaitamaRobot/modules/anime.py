@@ -651,7 +651,7 @@ UPCOMING_HANDLER = DisableAbleCommandHandler("upcoming", upcoming)
 KAIZOKU_SEARCH_HANDLER = DisableAbleCommandHandler("kaizoku", kaizoku)
 KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 ANIMEACEDEMY_SEARCH_HANDLER = DisableAbleCommandHandler("animeacedemy", animeacedemy)
-HSA_SEARCH_HANDLER = DisableAbleCommandHandler("HSA", HSA)
+HSA_SEARCH_HANDLER = DisableAbleCommandHandler("hsa", hsa)
 COOLSANIME_SEARCH_HANDLER = DisableAbleCommandHandler("coolsanime", coolsanime)
 BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
 
