@@ -62,8 +62,8 @@ There is No support Group For Tanjiro. Because it's Group Restricted.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a Hero For Fun and help admins manage their groups with One Punch! Have a look at the following for an idea of some of \
+Hey there! My name is *{}* (鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)!
+I Slay Bad Demons Wandering At night and help admins manage their groups with My Commands! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
