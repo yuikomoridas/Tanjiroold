@@ -14,8 +14,8 @@ from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
 kayo_btn = "Kayo 🏴‍☠️"
-animeacedemy_btn = "AnimeAcedemy ☠️"
-animetm_btn = "Animetm ☠️"
+animeacedemy_btn = "AnimeAcedemy 👑"
+hsa_btn = "HindiSubAnime 👊"
 coolsanime_btn = "coolsanime ☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
@@ -552,17 +552,17 @@ def site_search(update: Update, context: CallbackContext, site: str):
            post_name = html.escape(entry.text.strip())
            result += f"• <a href='{post_link}'>{post_name}</a>\n"
            
-    elif site == "animetm":
-        search_url = f"https://animetmdubbers.in/?s={search_query}"
+    elif site == "hsa":
+        search_url = f"https://www.hindianime.net/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"}) 
         
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animetmdubber</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>HSA</code>: \n"
         for entry in search_result:
                  
            if entry.text.strip() == "Nothing Found":
-                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>"
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>HSA</code>"
                 more_results = False
                 break
                 
@@ -636,7 +636,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
  • `/kayo <anime>`*:* search an anime on animekayo.com
  • `/animeacedemy <anime>`*:* search an anime on animeacedemy.in
- • `/animetm <anime>`*:* search an anime on animetmdubbers.in
+ • `/hsa <anime>`*:* search an anime on https://www.hindianime.net/
  • `/coolsanime <anime>`*:* search an anime on coolsanime.org
  • `/airing <anime>`*:* returns anime airing info.
 
@@ -651,7 +651,7 @@ UPCOMING_HANDLER = DisableAbleCommandHandler("upcoming", upcoming)
 KAIZOKU_SEARCH_HANDLER = DisableAbleCommandHandler("kaizoku", kaizoku)
 KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 ANIMEACEDEMY_SEARCH_HANDLER = DisableAbleCommandHandler("animeacedemy", animeacedemy)
-ANIMETM_SEARCH_HANDLER = DisableAbleCommandHandler("animetm", animetm)
+HSA_SEARCH_HANDLER = DisableAbleCommandHandler("HSA", HSA)
 COOLSANIME_SEARCH_HANDLER = DisableAbleCommandHandler("coolsanime", coolsanime)
 BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
 
@@ -664,7 +664,7 @@ dispatcher.add_handler(USER_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(ANIMEACEDEMY_SEARCH_HANDLER)
-dispatcher.add_handler(ANIMETM_SEARCH_HANDLER)
+dispatcher.add_handler(HSA_SEARCH_HANDLER)
 dispatcher.add_handler(COOLSANIME_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
@@ -676,5 +676,5 @@ __command_list__ = [
 __handlers__ = [
     ANIME_HANDLER, CHARACTER_HANDLER, MANGA_HANDLER, USER_HANDLER,
     UPCOMING_HANDLER, KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER,
-     ANIMEACEDEMY_SEARCH_HANDLER,  ANIMETM_SEARCH_HANDLER,  COOLSANIME_SEARCH_HANDLER,  BUTTON_HANDLER, AIRING_HANDLER
+     ANIMEACEDEMY_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  COOLSANIME_SEARCH_HANDLER,  BUTTON_HANDLER, AIRING_HANDLER
 ]
