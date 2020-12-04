@@ -16,7 +16,7 @@ Can be found on telegram as [Tanjiro Kamado](https://t.me/).
 
 The Support group can be reached out to at [Tanjiro Kamado Support Support](https://t.me/TanjiroKamadoSupport), where you can ask for help about [SaitamaRobot](https://t.me/TanjiroKamadoRoBot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
-News channel as at [Demon Slayer Updates](https://t.me/DemonSlayerUpdates) 
+News channel as at [One Punch Updates](https://t.me/OnePunchUpdates) 
 
 ## How to setup/deploy.
 
