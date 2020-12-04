@@ -17,6 +17,7 @@ kayo_btn = "Kayo 🏴‍☠️"
 animeacedemy_btn = "AnimeAcedemy 👑"
 hsa_btn = "HindiSubbedAnime 👊"
 ast_btn = "AnimeSubbingTeam☠️"
+atf_btn = "ATF Anime 🍿"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
 close_btn = "Close ❌"
@@ -589,12 +590,12 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
 
     elif site == "atf":
-        search_url = f"https://animesubingteam.000webhostapp.com/?s={search_query}"
+        search_url = f"https://atfanime.in/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeSubbingTeam</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>ATF Anime</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
@@ -640,6 +641,10 @@ def hsa(update: Update, context: CallbackContext):
 def ast(update: Update, context: CallbackContext):
     site_search(update, context, "ast")
 
+@run_async
+def atf(update: Update, context: CallbackContext):
+    site_search(update, context, "atf")
+
 
 __help__ = """
 Get information about anime, manga or characters from [AniList](anilist.co).
@@ -672,6 +677,7 @@ KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 AAT_SEARCH_HANDLER = DisableAbleCommandHandler("aat", aat)
 HSA_SEARCH_HANDLER = DisableAbleCommandHandler("hsa", hsa)
 AST_SEARCH_HANDLER = DisableAbleCommandHandler("ast", ast)
+ATF_SEARCH_HANDLER = DisableAbleCommandHandler("atf", atf)
 BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
 
 dispatcher.add_handler(BUTTON_HANDLER)
@@ -685,15 +691,16 @@ dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(AAT_SEARCH_HANDLER)
 dispatcher.add_handler(HSA_SEARCH_HANDLER)
 dispatcher.add_handler(AST_SEARCH_HANDLER)
+dispatcher.add_handler(ATF_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
 __mod_name__ = "Anime"
 __command_list__ = [
     "anime", "manga", "character", "user", "upcoming", "kaizoku", "airing",
-    "kayo" "aat", "hsa", "ast",
+    "kayo" "aat", "hsa", "ast", "atf",
 ]
 __handlers__ = [
     ANIME_HANDLER, CHARACTER_HANDLER, MANGA_HANDLER, USER_HANDLER,
     UPCOMING_HANDLER, KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER,
-     AAT_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  AST_SEARCH_HANDLER,  BUTTON_HANDLER, AIRING_HANDLER
+     AAT_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  AST_SEARCH_HANDLER,  AST_SEARCH_HANDLER, BUTTON_HANDLER, AIRING_HANDLER
 ]
