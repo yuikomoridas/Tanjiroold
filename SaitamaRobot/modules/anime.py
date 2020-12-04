@@ -653,7 +653,7 @@ KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 AAT_SEARCH_HANDLER = DisableAbleCommandHandler("aat", aat)
 HSA_SEARCH_HANDLER = DisableAbleCommandHandler("hsa", hsa)
 AST_SEARCH_HANDLER = DisableAbleCommandHandler("ast", ast)
-BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*)
+BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
 
 dispatcher.add_handler(BUTTON_HANDLER)
 dispatcher.add_handler(ANIME_HANDLER)
