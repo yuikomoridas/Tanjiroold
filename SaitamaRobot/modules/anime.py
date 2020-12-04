@@ -615,8 +615,8 @@ def animeacedemy(update: Update, context: CallbackContext):
     site_search(update, context, "animeacedemy")
    
 @run_async
-def animetm(update: Update, context: CallbackContext):
-    site_search(update, context, "animetm")
+def hsa(update: Update, context: CallbackContext):
+    site_search(update, context, "hsa")
     
 @run_async
 def coolsanime(update: Update, context: CallbackContext):
