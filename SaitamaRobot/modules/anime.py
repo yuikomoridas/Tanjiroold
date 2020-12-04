@@ -573,11 +573,8 @@ def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
     
 @run_async
-
-def animespot(update: Update, context: CallbackContext):
-
-    site_search(update, context, "animespot")
-
+def animeacedemy(update: Update, context: CallbackContext):
+    site_search(update, context, "animeacedemy")
 
 __help__ = """
 Get information about anime, manga or characters from [AniList](anilist.co).
@@ -591,6 +588,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/upcoming`*:* returns a list of new anime in the upcoming seasons.
  • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
  • `/kayo <anime>`*:* search an anime on animekayo.com
+ • `/animeacedemy <anime>`*:* search an anime on animeacedemy.in
  • `/airing <anime>`*:* returns anime airing info.
 
  """
