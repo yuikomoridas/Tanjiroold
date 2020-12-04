@@ -10,7 +10,9 @@ from telegram.ext import run_async, CallbackContext, CommandHandler, MessageHand
 from telegram.utils.helpers import mention_html
 
 import SaitamaRobot.modules.sql.global_bans_sql as sql
-from SaitamaRobot import dispatcher, OWNER_ID, GBAN_LOGS, SUPPORT_CHAT, DEV_USERS, SUDO_USERS, TIGER_USERS, WHITELIST_USERS, SUPPORT_USERS, STRICT_GBAN
+from SaitamaRobot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
+                          SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
+                          WOLVES, sw, dispatcher)
 from SaitamaRobot.modules.helper_funcs.chat_status import user_admin, is_user_admin
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
 from SaitamaRobot.modules.helper_funcs.filters import CustomFilters
@@ -62,19 +64,19 @@ def gban(update: Update, context:CallbackContext):
         message.reply_text("I spy, with my little eye... a sudo user war! Why are you guys turning on each other?")
         return
 
-    if int(user_id) in SUDO_USERS:
+    if int(user_id) in DRAGONS:
         message.reply_text("I spy, with my little eye... a sudo user war! Why are you guys turning on each other?")
         return
 
-    if int(user_id) in SUPPORT_USERS:
+    if int(user_id) in DEMONS:
         message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
-    if int(user_id) in TIGER_USERS:
+    if int(user_id) in TIGERS:
         message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
-    if int(user_id) in WHITELIST_USERS:
+    if int(user_id) in WOLFS:
         message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
@@ -268,7 +270,7 @@ def ungban(update: Update, context:CallbackContext):
                 GBAN_LOGS, log_message +
                 "\n\nFormatting has been disabled due to an unexpected error.")
     else:
-        send_to_list(bot, SUDO_USERS + SUPPORT_USERS, log_message, html=True)
+        send_to_list(bot, DRAGONS + DEMONS, log_message, html=True)
 
     chats = get_all_chats()
     ungbanned_chats = 0
@@ -310,7 +312,7 @@ def ungban(update: Update, context:CallbackContext):
             log_message + f"\n<b>Chats affected:</b> {ungbanned_chats}",
             parse_mode=ParseMode.HTML)
     else:
-        send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gban complete!")
+        send_to_list(bot, DRAGONS + DEMONS, "un-gban complete!")
 
     end_time = time.time()
     ungban_time = round((end_time - start_time), 2)
@@ -457,7 +459,7 @@ def __user_info__(user_id):
     text = "Globally banned: <b>{}</b>"
     if user_id == dispatcher.bot.id:
         return ""
-    if int(user_id) in SUDO_USERS + TIGER_USERS + WHITELIST_USERS:
+    if int(user_id) in DRAGONS + TIGERS + WOLVES:
         return ""
     if is_gbanned:
         text = text.format("Yes")
