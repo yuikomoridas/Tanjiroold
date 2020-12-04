@@ -540,7 +540,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"}) 
         
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animeacedemydubber</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Animeacedemy</code>: \n"
         for entry in search_result:
                  
            if entry.text.strip() == "Nothing Found":
