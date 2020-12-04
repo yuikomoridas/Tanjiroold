@@ -661,7 +661,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/aat <anime>`*:* search an anime on animeacademy.in
  • `/hsa <anime>`*:* search an anime on hindianime.net
  • `/ast <anime>`*:* search an anime on animesubingteam.000webhostapp.com
- • `/atf <anime>`*:* search an anime on animesubingteam.000webhostapp.com
+ • `/atf <anime>`*:* search an anime on atfanime.in
  • `/airing <anime>`*:* returns anime airing info.
 
  """
