@@ -50,18 +50,14 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-def send_start(bot, update):
-    #Try to remove old message
-    try:
-        query = update.callback_query
-        query.message.delete()
-    except:
-        pass
-    chat = update.effective_chat  # type: Optional[Chat]
-    text = "Heya there, my name is Tanjiro Kamado(鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)! "
-    text += "\nI'm the eldest child in my family. I am a demon slayer who hunts demons. I became demon slayer only to convert my sister Nezuko back to human... Add me in ur grp to manage your grp. Use /help for knowing my commands..."
-    text += "\n\nI Travel with my 2 friends Inosuke Harshibra and Zenitsu Agatsuma. Our work to kill bad demons and and make this world demon free. U will use me anytime anywhere I will be happy only by helping you!!!"  
-    
+PM_START_TEXT = """
+Hi {}, my name is {}! 
+I am an Anime themed group management bot.
+To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
+You can find my list of available commands with /help.
+[Saitama's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
+See [Basic Configuration Checklist](t.me/OnePunchUpdates/29) on how to secure your group.
+There is No support Group For Tanjiro. This bot is Forked From Saitama Robot.
 """
 
 HELP_STRINGS = """
