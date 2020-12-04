@@ -12,11 +12,11 @@ from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
 from telegram.ext import CallbackContext, CallbackQueryHandler, run_async
 
 info_btn = "More Information"
-kaizoku_btn = "Kaizoku ☠️"
+kaizoku_btn = "Kaizoku 💓"
 kayo_btn = "Kayo 🏴‍☠️"
 animeacedemy_btn = "AnimeAcedemy 👑"
-hsa_btn = "Hsa 👊"
-coolsanime_btn = "coolsanime ☠️"
+hsa_btn = "HindiSubbedAnime 👊"
+ast_btn = "AnimeSubbingTeam☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
 close_btn = "Close ❌"
@@ -570,17 +570,17 @@ def site_search(update: Update, context: CallbackContext, site: str):
            post_name = html.escape(entry.text.strip())
            result += f"• <a href='{post_link}'>{post_name}</a>\n"
            
-    elif site == "coolsanime":
-        search_url = f"https://coolsanime.org/?s={search_query}"
+    elif site == "ast":
+        search_url = f"https://animesubingteam.000webhostapp.com/?s={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>CoolsAnime</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeSubbingTeam</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
-                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>CoolsAnime</code>"
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AST</code>"
                 more_results = False
                 break
 
