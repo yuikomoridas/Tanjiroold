@@ -76,7 +76,7 @@ def gban(update: Update, context:CallbackContext):
         message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
-    if int(user_id) in WOLFS:
+    if int(user_id) in WOLVES:
         message.reply_text("OOOH someone's trying to gban a support user! *grabs popcorn*")
         return
 
