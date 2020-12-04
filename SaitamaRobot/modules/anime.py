@@ -571,6 +571,12 @@ def kaizoku(update: Update, context: CallbackContext):
 @run_async
 def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
+    
+@run_async
+
+def animespot(update: Update, context: CallbackContext):
+
+    site_search(update, context, "animespot")
 
 
 __help__ = """
