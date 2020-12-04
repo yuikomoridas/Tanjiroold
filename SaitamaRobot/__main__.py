@@ -55,9 +55,10 @@ Hi {}, my name is {}!
 I am an Anime themed group management bot.
 To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
 You can find my list of available commands with /help.
-[Saitama's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
+[Tanjiro's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
 See [Basic Configuration Checklist](t.me/OnePunchUpdates/29) on how to secure your group.
-There is No support Group For Tanjiro. This bot is Forked From Saitama Robot.
+There is No support Group For Tanjiro. Because it's Group Restricted.
+ This bot is Forked From Saitama Robot.
 """
 
 HELP_STRINGS = """
