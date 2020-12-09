@@ -20,6 +20,7 @@ googletrans
 jikanpy
 speedtest-cli
 coffeehouse
+cachetools
 google_trans_new
 regex
 bleach
