@@ -52,15 +52,20 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hi {}, my name is {}! 
-I am an Anime themed group management bot with some fun extras ;)
-You can find the list of available commands with /help
+Hey there! My name is *{}* (鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)!
+I Slay Bad Demons Wandering At night and help admins manage their groups with My Commands! Have a look at the following for an idea of some of \
+the things I can help you with. Type /help to see my Functions.
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a part of Pokemon
-Have a look at the following for an idea of some of the things I can help you with.
+I am an Anime themed group management bot.
+To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
+You can find my list of available commands with /help.
+[Tanjiro's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
+See [Basic Configuration Checklist](t.me/OnePunchUpdates/29) on how to secure your group.
+There is No support Group For Tanjiro. Because it's Group Restricted.
+This bot is Forked From Saitama Robot.
 
 *Main* commands available:
  • /help: PM's you this message.
