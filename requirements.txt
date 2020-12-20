@@ -23,6 +23,7 @@ coffeehouse
 cachetools
 google_trans_new
 regex
+redis
 bleach
 git+https://github.com/starry69/python-markdown2.git
 wikipedia
