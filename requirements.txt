@@ -5,6 +5,7 @@ beautifulsoup4
 requests
 sqlalchemy
 python-telegram-bot==12.8
+pyrogram
 psycopg2-binary
 feedparser
 pynewtonmath
