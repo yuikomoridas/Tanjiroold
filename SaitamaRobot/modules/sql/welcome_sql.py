@@ -12,30 +12,30 @@ DEFAULT_GOODBYE = 'Nice knowing ya!'
 
 DEFAULT_WELCOME_MESSAGES = [
     "{first} is here!",  #Discord welcome messages copied
-    "Ready player {first}",
-    "Genos, {first} is here.",
-    "A wild {first} appeared.",
-    "{first} came in like a Lion!",
+    "Ready to fight {first}",
+    "Nezuko, {first} is here.",
+    "O Inosuke {first} appeared.",
+    "{first} is Came like a Thunder!",
     "{first} has joined your party.",
-    "{first} just joined. Can I get a heal?",
-    "{first} just joined the chat - asdgfhak!",
+    "{first} just joined. Zenitsu Let's go to mission",
+    "{first} just joined the chat!",
     "{first} just joined. Everyone, look busy!",
-    "Welcome, {first}. Stay awhile and listen.",
+    "Welcome, {first}. How are You and Your Training.",
     "Welcome, {first}. We were expecting you ( ͡° ͜ʖ ͡°)",
     "Welcome, {first}. We hope you brought pizza.",
-    "Welcome, {first}. Leave your weapons by the door.",
-    "Swoooosh. {first} just landed.",
+    "Welcome, {first}. Hold Your Nichirin Blade.",
+    "Swoooosh. {first} just Arrived.",
     "Brace yourselves. {first} just joined the chat.",
-    "{first} just joined. Hide your bananas.",
+    "{first} just joined. All demons ran away.",
     "{first} just arrived. Seems OP - please nerf.",
     "{first} just slid into the chat.",
-    "A {first} has spawned in the chat.",
-    "Big {first} showed up!",
+    "A {first} has came in the chat.",
+    "{first} showed up!",
     "Where’s {first}? In the chat!",
-    "{first} hopped into the chat. Kangaroo!!",
+    "{first} Come like a wind. Harshira!!",
     "{first} just showed up. Hold my beer.",
-    "Challenger approaching! {first} has appeared!",
-    "It's a bird! It's a plane! Nevermind, it's just {first}.",
+    "Demon approaching! {first} has appeared!",
+    "It's a Fire! It's a water! Nevermind, it's just {first}.",
     "It's {first}! Praise the sun! \o/",
     "Never gonna give {first} up. Never gonna let {first} down.",
     "Ha! {first} has joined! You activated my trap card!",
@@ -51,21 +51,21 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} has joined. Stay awhile and listen!",
     "Roses are red, violets are blue, {first} joined this chat with you",
     "Welcome {first}, Avoid Punches if you can!",
-    "It's a bird! It's a plane! - Nope, its {first}!",
+    "It's a Harshira! It's a slayer! - Nope, its {first}!",
     "{first} Joined! - Ok.",  #Discord welcome messages end.
     "All Hail {first}!",
     "Hi, {first}. Don't lurk, only Villans do that.",
     "{first} has joined the battle bus.",
-    "A new Challenger enters!",  #Tekken
-    "Ok!",
+    "A new Slayer enters!",  #Tekken
+    "O {first} Welcome, How are you!",
     "{first} just fell into the chat!",
     "Something just fell from the sky! - oh, its {first}.",
     "{first} Just teleported into the chat!",
     "Hi, {first}, show me your Hunter License!",  #Hunter Hunter
-    "I'm looking for Garo, oh wait nvm it's {first}.",  #One Punch man s2
+    "I'm looking for Inosuke, oh wait nvm it's {first}.",  #One Punch man s2
     "Welcome {first}, leaving is not an option!",
     "Run Forest! ..I mean...{first}.",
-    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",  #One Punch ma
+    "{first} do Training and be the best!!!",  #Demon Slayer
     "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",  #One Punch ma 
     "Hey, {first}, ever heard the King Engine?",  #One Punch ma
     "Hey, {first}, empty your pockets.",
@@ -92,7 +92,7 @@ DEFAULT_WELCOME_MESSAGES = [
     "Hey {first}, do you wanna know how I got these scars?",
     "Welcome {first}, drop your weapons and proceed to the spy scanner.",
     "Stay safe {first}, Keep 3 meters social distances between your messages.",  #Corona memes lmao
-    "Hey {first}, Do you know I once One-punched a meteorite?",
+    "Hey {first}, Do you know I once Battled with Rui?",
     "You’re here now {first}, Resistance is futile",
     "{first} just arrived, the force is strong with this one.",
     "{first} just joined on president’s orders.",
@@ -169,6 +169,8 @@ DEFAULT_GOODBYE_MESSAGES = [
     "Goodbye {first}! It's gonna be lonely without ya.",
     "Please don't leave me alone in this place, {first}!",
     "Good luck finding better shit-posters than us, {first}!",
+    "Pehli Fursat Me Nikal!",
+    "{first} Runs away when demon appeared!",
     "You know we're gonna miss you {first}. Right? Right? Right?",
     "Congratulations, {first}! You're officially free of this mess.",
     "{first}. You were an opponent worth fighting.",
