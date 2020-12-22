@@ -171,7 +171,7 @@ def new_member(update: Update, context: CallbackContext):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oh, Genos? Let's get this moving.",
+                    "My master The Great Yorichi Arrived.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -181,7 +181,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! A member of the Heroes Association just joined!",
+                    "Whoa! A member of the Upper Rank Demonjust joined!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -189,7 +189,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Huh! A Dragon disaster just joined! Stay Alert!",
+                    "Huh! A Harshira just joined! Demons Stay Alert!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -197,7 +197,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Support
             elif new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "Huh! Someone with a Demon disaster level just joined!",
+                    "Huh! Someone with a Lover demon level just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -205,14 +205,14 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Whitelisted
             elif new_mem.id in TIGERS:
                 update.effective_message.reply_text(
-                    "Oof! A Tiger disaster just joined!",
+                    "Oof! A normal slayer just joined!",
                     reply_to_message_id=reply)
                 continue
 
             # Welcome Tigers
             elif new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "Oof! A Wolf disaster just joined!",
+                    "Oof! A normal demon just joined!",
                     reply_to_message_id=reply)
                 continue
 
@@ -239,7 +239,7 @@ def new_member(update: Update, context: CallbackContext):
                         .format(html.escape(chat.title), chat.id),
                         parse_mode=ParseMode.HTML)
                 update.effective_message.reply_text(
-                    "Watashi ga kita!", reply_to_message_id=reply)
+                    "Tatakayeee!", reply_to_message_id=reply)
                 continue
 
             else:
@@ -483,13 +483,13 @@ def left_member(update: Update, context: CallbackContext):
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Oi! Genos! He left..", reply_to_message_id=reply)
+                    "The Great Harshira Just Leaved This Group.", reply_to_message_id=reply)
                 return
 
             # Give the devs a special goodbye
             elif left_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "See you later at the Hero's Association!",
+                    "See you later at the Harshira's Headquarters!",
                     reply_to_message_id=reply,
                 )
                 return
