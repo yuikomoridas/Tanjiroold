@@ -58,7 +58,7 @@ def check_flood(update, context) -> str:
         elif getmode == 4:
             bantime = extract_time(msg, getvalue)
             chat.kick_member(user.id, until_date=bantime)
-            execstrings = ("Banned for {}".format(getvalue))
+            execstrings = ("This Person Banned for {}".format(getvalue))
             tag = "TBAN"
         elif getmode == 5:
             mutetime = extract_time(msg, getvalue)
@@ -67,10 +67,10 @@ def check_flood(update, context) -> str:
                 user.id,
                 until_date=mutetime,
                 permissions=ChatPermissions(can_send_messages=False))
-            execstrings = ("Muted for {}".format(getvalue))
+            execstrings = ("This Person muted for {}".format(getvalue))
             tag = "TMUTE"
         send_message(update.effective_message,
-                     "Beep Boop! Boop Beep!\n{}!".format(execstrings))
+                     "Oh Sir/Madamn This is not your private space to spam😑! Now Take This!\n{}!".format(execstrings))
 
         return "<b>{}:</b>" \
                "\n#{}" \
