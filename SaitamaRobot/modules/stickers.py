@@ -72,6 +72,35 @@ def getsticker(update: Update, context: CallbackContext):
         update.effective_message.reply_text(
             "Please reply to a sticker for me to upload its PNG.")
 
+@run_async
+def getsticker(update, context):
+    msg = update.effective_message
+    chat_id = update.effective_chat.id
+    if msg.reply_to_message and msg.reply_to_message.sticker:
+        context.bot.sendChatAction(chat_id, "typing")
+        update.effective_message.reply_text(
+            "Hello"
+            + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
+            + ", Please check the file you requested below."
+            "\nPlease use this feature wisely!",
+            parse_mode=ParseMode.HTML,
+        )
+        context.bot.sendChatAction(chat_id, "upload_document")
+        file_id = msg.reply_to_message.sticker.file_id
+        newFile = context.bot.get_file(file_id)
+        newFile.download("sticker.png")
+        context.bot.sendDocument(chat_id, document=open("sticker.png", "rb"))
+        context.bot.sendChatAction(chat_id, "upload_photo")
+        context.bot.send_photo(chat_id, photo=open("sticker.png", "rb"))
+
+    else:
+        context.bot.sendChatAction(chat_id, "typing")
+        update.effective_message.reply_text(
+            "Hello"
+            + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
+            + ", Please reply to sticker message to get sticker image",
+            parse_mode=ParseMode.HTML,
+        )
 
 @run_async
 def kang(update: Update, context: CallbackContext):
@@ -428,6 +457,7 @@ __help__ = """
 • `/getsticker`*:* reply to a sticker to me to upload its raw PNG file.
 • `/kang`*:* reply to a sticker to add it to your pack.
 • `/stickers`*:* Find stickers for given term on combot sticker catalogue
+• `/getsticker`*:* Reply to a sticker to me to upload its raw PNG file.
 """
 
 __mod_name__ = "Stickers"
@@ -435,8 +465,10 @@ STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
 KANG_HANDLER = DisableAbleCommandHandler("kang", kang, admin_ok=True)
 STICKERS_HANDLER = DisableAbleCommandHandler("stickers", cb_sticker)
+GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker)
 
 dispatcher.add_handler(STICKERS_HANDLER)
 dispatcher.add_handler(STICKERID_HANDLER)
 dispatcher.add_handler(GETSTICKER_HANDLER)
 dispatcher.add_handler(KANG_HANDLER)
+dispatcher.add_handler(GETSTICKER_HANDLER)
