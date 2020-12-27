@@ -205,7 +205,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="Add Tanjiro Kamado to your group!🙃",
+                            text="🙃Add Tanjiro Kamado to your group!🙃",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -214,17 +214,17 @@ def start(update: Update, context: CallbackContext):
                              text="👀Support Group",
                              url=f"https://t.me/TanjiroKamadoSupport"),
                          InlineKeyboardButton(
-                             text="🔔Updates Channel",
-                             url="https://t.me/BotLabUpdates")
+                             text="📃Updates Channel📃",
+                             url="https://t.me/TanjiroUpdates")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="📖 Getting Started Guide",
-                             url="https://t.me/BotLabUpdates/3")
+                             text="💬Getting Started Guide💬",
+                             url="https://t.me/TanjiroUpdates/3")
                      ],
                      [
                          InlineKeyboardButton(
-                             text="💾 Source Code.",
+                             text="📸 Source Code.",
                              url="https://github.com/JayPatel1314/Tanjiro-Kamado")
                      ]]))
     else:
