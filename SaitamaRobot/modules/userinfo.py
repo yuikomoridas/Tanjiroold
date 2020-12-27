@@ -225,9 +225,9 @@ def info(update: Update, context: CallbackContext):
         return
 
     rep = message.reply_text(
-        "<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+        "<code>Getting Info Wait pls 🙃...</code>", parse_mode=ParseMode.HTML)
 
-    text = (f"╒═══「<b> Appraisal results:</b> 」\n"
+    text = (f"╒═══「<b> User Info:</b> 」\n"
             f"ID: <code>{user.id}</code>\n"
             f"First Name: {html.escape(user.first_name)}")
 
@@ -275,7 +275,7 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThe Disaster level of this person is 'God'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is member of 'Bot Lab'."
+        text += "\n\nThis user is member of 'Harshira'."
         disaster_level_present = True
     elif user.id in DRAGONS:
         text += "\n\nThe Disaster level of this person is 'Dragon'."
@@ -291,7 +291,7 @@ def info(update: Update, context: CallbackContext):
         disaster_level_present = True
 
     if disaster_level_present:
-        text += ' [<a href="https://t.me/BotLabUpdates/33">?</a>]'.format(
+        text += ' [<a href="https://t.me/TanjiroUpdates/5">What is this?</a>]'.format(
             bot.username)
 
     try:
