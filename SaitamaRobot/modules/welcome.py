@@ -181,7 +181,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! A member of the Upper Rank Demonjust joined!",
+                    "Huh! A Harshira just joined! Demons Stay Alert!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -189,7 +189,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Sudos
             elif new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Huh! A Harshira just joined! Demons Stay Alert!",
+                    "Whoa! A member of the Upper Rank Demon just joined!",
                     reply_to_message_id=reply,
                 )
                 continue
