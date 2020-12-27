@@ -609,7 +609,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
 
     elif site == "an":
-        search_url = f"http://www.animenagri.com/search?q={search_query}"
+        search_url = f"http://www.animenagri.com/search?q={search_query}&m=1"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
