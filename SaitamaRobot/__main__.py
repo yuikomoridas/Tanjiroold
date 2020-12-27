@@ -64,8 +64,8 @@ To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botsta
 You can find my list of available commands with /help.
 [Tanjiro's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
 See [Basic Configuration Checklist](t.me/OnePunchUpdates/29) on how to secure your group.
-There is No support Group For Tanjiro. Because it's Group Restricted.
-This bot is Forked From Saitama Robot.
+If any Questions Regarding Tanjiro Then Join [Tanjiro Support](https://t.me/TanjiroKamadoSupport).
+This bot is Forked From [Saitama Robot](https://t.me/SaitamaRobot).
 
 *Main* commands available:
  • /help: PM's you this message.
