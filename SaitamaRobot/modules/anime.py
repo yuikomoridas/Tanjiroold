@@ -609,7 +609,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
 
     elif site == "an":
-        search_url = f"http://www.animenagri.com/search?q={search_query}&m=1"
+        search_url = f"http://www.animenagri.com/search?q={search_query}"
         html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
@@ -686,7 +686,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/hsa <anime>`*:* search an anime on hindianime.net
  • `/ast <anime>`*:* search an anime on animesubingteam.000webhostapp.com
  • `/atf <anime>`*:* search an anime on atfanime.in
- • `/an <anime>`*:* search an anime on animenagri.in
+ • `/an <anime>`*:* search an anime on animenagri.com
  • `/airing <anime>`*:* returns anime airing info.
 
  """
