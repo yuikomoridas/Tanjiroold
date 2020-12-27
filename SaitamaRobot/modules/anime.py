@@ -18,6 +18,7 @@ animeacedemy_btn = "AnimeAcedemy 👑"
 hsa_btn = "HindiSubbedAnime 👊"
 ast_btn = "AnimeSubbingTeam☠️"
 atf_btn = "ATF Anime 🍿"
+an_btn = "Anime Nagri⚔️⚔️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
 close_btn = "Close ❌"
@@ -595,7 +596,7 @@ def site_search(update: Update, context: CallbackContext, site: str):
         soup = bs4.BeautifulSoup(html_text, "html.parser")
         search_result = soup.find_all("h2", {'class': "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>ATF Anime</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>ATF anime</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
@@ -606,6 +607,25 @@ def site_search(update: Update, context: CallbackContext, site: str):
             post_link = entry.a['href']
             post_name = html.escape(entry.text.strip())
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
+
+    elif site == "an":
+        search_url = f"http://www.animenagri.com/search?q={search_query}"
+        html_text = requests.get(search_url).text
+        soup = bs4.BeautifulSoup(html_text, "html.parser")
+        search_result = soup.find_all("h2", {'class': "title"})
+
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Anime Nagri</code>: \n"
+        for entry in search_result:
+
+            if entry.text.strip() == "Nothing Found":
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>Anime Nagri</code>"
+                more_results = False
+                break
+
+            post_link = entry.a['href']
+            post_name = html.escape(entry.text.strip())
+            result += f"• <a href='{post_link}'>{post_name}</a>\n"
+
 
     buttons = [[InlineKeyboardButton("See all results", url=search_url)]]
 
@@ -645,6 +665,10 @@ def ast(update: Update, context: CallbackContext):
 def atf(update: Update, context: CallbackContext):
     site_search(update, context, "atf")
 
+@run_async
+def an(update: Update, context: CallbackContext):
+    site_search(update, context, "an")
+
 
 __help__ = """
 Get information about anime, manga or characters from [AniList](anilist.co).
@@ -662,6 +686,7 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  • `/hsa <anime>`*:* search an anime on hindianime.net
  • `/ast <anime>`*:* search an anime on animesubingteam.000webhostapp.com
  • `/atf <anime>`*:* search an anime on atfanime.in
+ • `/an <anime>`*:* search an anime on animenagri.in
  • `/airing <anime>`*:* returns anime airing info.
 
  """
@@ -678,6 +703,7 @@ AAT_SEARCH_HANDLER = DisableAbleCommandHandler("aat", aat)
 HSA_SEARCH_HANDLER = DisableAbleCommandHandler("hsa", hsa)
 AST_SEARCH_HANDLER = DisableAbleCommandHandler("ast", ast)
 ATF_SEARCH_HANDLER = DisableAbleCommandHandler("atf", atf)
+AN_SEARCH_HANDLER = DisableAbleCommandHandler("an", an)
 BUTTON_HANDLER = CallbackQueryHandler(button, pattern='anime_.*')
 
 dispatcher.add_handler(BUTTON_HANDLER)
@@ -692,15 +718,16 @@ dispatcher.add_handler(AAT_SEARCH_HANDLER)
 dispatcher.add_handler(HSA_SEARCH_HANDLER)
 dispatcher.add_handler(AST_SEARCH_HANDLER)
 dispatcher.add_handler(ATF_SEARCH_HANDLER)
+dispatcher.add_handler(AN_SEARCH_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
 
 __mod_name__ = "Anime"
 __command_list__ = [
     "anime", "manga", "character", "user", "upcoming", "kaizoku", "airing",
-    "kayo" "aat", "hsa", "ast", "atf",
+    "kayo" "aat", "hsa", "ast", "atf", "an",
 ]
 __handlers__ = [
     ANIME_HANDLER, CHARACTER_HANDLER, MANGA_HANDLER, USER_HANDLER,
     UPCOMING_HANDLER, KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER,
-     AAT_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  AST_SEARCH_HANDLER,  AST_SEARCH_HANDLER, BUTTON_HANDLER, AIRING_HANDLER
+    AAT_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  AST_SEARCH_HANDLER,  ATF_SEARCH_HANDLER, AN_SEARCH_HANDLER, BUTTON_HANDLER, AIRING_HANDLER
 ]
