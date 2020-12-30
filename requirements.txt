@@ -34,3 +34,4 @@ spamwatch
 alphabet_detector
 pyrate-limiter
 gtts
+nekos.py
