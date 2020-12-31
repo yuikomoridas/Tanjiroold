@@ -230,7 +230,7 @@ def anime(update, context):
             ]]
         else:
             buttons = [[InlineKeyboardButton("More Info", url=info)]]
-        buttons += [[InlineKeyboardButton("Add To Watchlist", callback_data=f"xanime_watchlist={anime_name_w}")]]
+        buttons += [[InlineKeyboardButton("💬Add To Watchlist📝", callback_data=f"xanime_watchlist={anime_name_w}")]]
         if image:
             try:
                 update.effective_message.reply_photo(
@@ -466,13 +466,13 @@ def watchlist(update, context):
     if watchlist:
         message.reply_text(
             "{}<b>'s Watchlist:</b>"
-            "\n• {}".format(mention_html(user.id, user.first_name),
+            "\n👉 {}".format(mention_html(user.id, user.first_name),
                         watchlist),
             parse_mode=ParseMode.HTML
         )
     else:
         message.reply_text(
-            "You havn't added anything in your watchlist!"
+            "Your Watchlist is Empty!"
         )
 @run_async
 def removewatchlist(update, context):
@@ -494,7 +494,7 @@ def removewatchlist(update, context):
         )
     else:
         message.reply_text(
-            f"<code>{removewlist}</code> has been removed from your watch list.",
+            f"<code>{removewlist}</code> has been successfully removed from your watch list.",
             parse_mode=ParseMode.HTML
         )
         REDIS.srem(f'anime_watch_list{user.id}', removewlist)
@@ -510,7 +510,7 @@ def fvrtchar(update, context):
     if fvrt_char:
         message.reply_text(
             "{}<b>'s Favorite Characters List:</b>"
-            "\n• {}".format(mention_html(user.id, user.first_name),
+            "\n👉 {}".format(mention_html(user.id, user.first_name),
                         fvrt_char),
             parse_mode=ParseMode.HTML
         )
@@ -555,7 +555,7 @@ def readmanga(update, context):
     if manga_list:
         message.reply_text(
             "{}<b>'s Manga Lists:</b>"
-            "\n• {}".format(mention_html(user.id, user.first_name),
+            "\n👉 {}".format(mention_html(user.id, user.first_name),
                         manga_list),
             parse_mode=ParseMode.HTML
         )
