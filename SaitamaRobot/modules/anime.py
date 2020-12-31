@@ -679,6 +679,14 @@ Get information about anime, manga or characters from [AniList](anilist.co).
  - /user <user>: returns information about a MyAnimeList user.
  - /upcoming: returns a list of new anime in the upcoming seasons.
  - /airing <anime>: returns anime airing info.
+ - /kaizoku <anime>: search an anime on animekaizoku.com
+ - /kayo <anime>: search an anime on animekayo.com
+ - /aat <anime>: search an anime on animeacademy.in
+ - /hsa <anime>: search an anime on hindianime.net
+ - /ast <anime>: search an anime on animesubingteam.000webhostapp.com
+ - /atf <anime>: search an anime on atfanime.in
+ - /an <anime>: search an anime on animenagri.com
+ - /cat <anime>: search an anime on catotakus.blogspot.com
  - /watchlist: to get your saved watchlist.
  - /mangalist: to get your saved manga read list.
  - /characterlist | fcl: to get your favorite characters list.
