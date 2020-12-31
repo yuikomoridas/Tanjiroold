@@ -4,7 +4,7 @@ import time
 
 from typing import Optional
 from telegram import ParseMode, Update, ChatPermissions
-from telegram.ext import CallbackContext, run_async
+from telegram.ext import CallbackContext, run_async, typing_action
 from telegram.error import BadRequest
 
 import SaitamaRobot.modules.fun_strings as fun_strings
