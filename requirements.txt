@@ -19,7 +19,6 @@ Pillow>=4.2.0
 CurrencyConverter
 googletrans
 jikanpy
-malclient
 speedtest-cli
 coffeehouse
 cachetools
