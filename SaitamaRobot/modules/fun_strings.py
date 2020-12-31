@@ -42,6 +42,7 @@ SLAP_TEMPLATES = (
     "{user2} starved without pats.",
     "{user2} was knocked into the void by {user1}.",
     "{user2} fainted.",
+    "{user1} Inserted {user2} inside the cooker.",
     "{user2} is out of usable Pokemon! {user2} whited out!.",
     "{user2} is out of usable Pokemon! {user2} blacked out!.",
     "{user2} got rekt.",
