@@ -5,6 +5,7 @@ import time
 from typing import Optional
 from telegram import ParseMode, Update, ChatPermissions
 from telegram.ext import CallbackContext, run_async
+from tswift import Song
 from telegram.error import BadRequest
 
 import SaitamaRobot.modules.fun_strings as fun_strings
