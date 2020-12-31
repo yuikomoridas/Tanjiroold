@@ -10,6 +10,7 @@ from telegram.error import BadRequest
 import SaitamaRobot.modules.fun_strings as fun_strings
 from SaitamaRobot import dispatcher
 from SaitamaRobot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot.modules.helper_funcs.alternate import send_message, typing_action
 from SaitamaRobot.modules.helper_funcs.chat_status import (is_user_admin)
 from SaitamaRobot.modules.helper_funcs.extraction import extract_user
 
@@ -135,6 +136,7 @@ def pat(update: Update, context: CallbackContext):
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 @run_async
+@typing_action
 def lyrics(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message
