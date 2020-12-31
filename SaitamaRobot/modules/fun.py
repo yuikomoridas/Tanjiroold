@@ -4,7 +4,7 @@ import time
 
 from typing import Optional
 from telegram import ParseMode, Update, ChatPermissions
-from telegram.ext import CallbackContext, run_async, typing_action
+from telegram.ext import CallbackContext, run_async
 from telegram.error import BadRequest
 
 import SaitamaRobot.modules.fun_strings as fun_strings
@@ -135,7 +135,6 @@ def pat(update: Update, context: CallbackContext):
         reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
 
 @run_async
-@typing_action
 def lyrics(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
     msg = update.effective_message
