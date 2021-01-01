@@ -168,6 +168,20 @@ def lyrics(update: Update, context: CallbackContext):
 def roll(update: Update, context: CallbackContext):
     update.message.reply_text(random.choice(range(1, 7)))
 
+@run_async
+def shout(update: Update, context: CallbackContext):
+    args = context.args
+    text = " ".join(args)
+    result = []
+    result.append(' '.join(list(text)))
+    for pos, symbol in enumerate(text[1:]):
+        result.append(symbol + ' ' + '  ' * pos + symbol)
+    result = list("\n".join(result))
+    result[0] = text[0]
+    result = "".join(result)
+    msg = "```\n" + result + "```"
+    return update.effective_message.reply_text(msg, parse_mode="MARKDOWN")
+
 
 @run_async
 def toss(update: Update, context: CallbackContext):
@@ -245,6 +259,7 @@ PAT_HANDLER = DisableAbleCommandHandler("pat", pat)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss)
 SHRUG_HANDLER = DisableAbleCommandHandler("shrug", shrug)
+SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout)
 BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
@@ -259,6 +274,7 @@ dispatcher.add_handler(ROLL_HANDLER)
 dispatcher.add_handler(TOSS_HANDLER)
 dispatcher.add_handler(LYRICS_HANDLER)
 dispatcher.add_handler(SHRUG_HANDLER)
+dispatcher.add_handler(SHOUT_HANDLER)
 dispatcher.add_handler(BLUETEXT_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
@@ -266,11 +282,11 @@ dispatcher.add_handler(TABLE_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
-    "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide",
+    "runs", "slap", "roll", "toss", "shrug", "shout", "bluetext", "rlg", "decide",
     "table", "pat", "sanitize", "lyrics",
 ]
 __handlers__ = [
     RUNS_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
     SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER,
-    SANITIZE_HANDLER, LYRICS_HANDLER
+    SANITIZE_HANDLER, LYRICS_HANDLER, SHOUT_HANDLER
 ]
