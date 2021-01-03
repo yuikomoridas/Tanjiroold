@@ -8,7 +8,7 @@ from telethon.tl import functions
 
 langi = "en"
 
-async def (chat, user):
+async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
         return isinstance(
