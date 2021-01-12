@@ -58,7 +58,7 @@ the things I can help you with. Type /help to see my Functions.
 """
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
+Hey there *{}*! My name is Tanjiro.
 I am an Anime themed group management bot.
 To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
 You can find my list of available commands with /help.
@@ -212,15 +212,15 @@ def start(update: Update, context: CallbackContext):
                      [
                          InlineKeyboardButton(
                              text="👀Support Group",
-                             url=f"https://t.me/TanjiroKamadoSupport"),
+                             url=f"https://t.me/TanjiroSupport"),
                          InlineKeyboardButton(
                              text="📃Updates Channel📃",
-                             url="https://t.me/TanjiroUpdates")
+                             url="https://t.me/TanjiroUpdatesOO1")
                      ],
                      [
                          InlineKeyboardButton(
                              text="💬Getting Started Guide💬",
-                             url="https://t.me/TanjiroUpdates/3")
+                             url="https://t.me/TanjiroUpdates001/3")
                      ],
                      [
                          InlineKeyboardButton(
