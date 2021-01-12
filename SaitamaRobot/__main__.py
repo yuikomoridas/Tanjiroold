@@ -215,7 +215,7 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/TanjiroSupport"),
                          InlineKeyboardButton(
                              text="📃Updates Channel📃",
-                             url="https://t.me/TanjiroUpdatesOO1")
+                             url="https://t.me/TanjiroUpdates001")
                      ],
                      [
                          InlineKeyboardButton(
