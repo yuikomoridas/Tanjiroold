@@ -39,6 +39,23 @@ TRUTH = (
     "What is your Favourite Lifestyle program",
     "Which Family Member do you love the most",
     "Suggest me some more truths",
+    "Who is your waifu?",
+    "How many Times You are scolded by your teacher?",
+    "Who is your Favourite Youtuber",
+    "Do you know about anime",
+    "Which is your Favourite Book",
+    "Have you ghosted anybody",
+    "Do you believe in Ghosts",
+    "What are your future plans",
+    "Say something about your carrier",
+    "Which actor/actress do you like the most",
+    "Which anime movie/series made you cry",
+    "Which comedy show/anime do you like the most.",
+    "Do you seen TikTok?",
+    "Are You a TikToker?",
+    "What will be your Reaction when TikTok is banned?",
+    "To whom you said I Love You?",
+    "What is your future goal?",
   
 )
 
