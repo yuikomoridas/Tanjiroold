@@ -52,13 +52,13 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hey there! My name is *{}* (鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)!
+Hey there *{}*! My name is Tanjiro (鬼滅の刃(Kimetsu No Yaiba, Demon Slayer)!
 I Slay Bad Demons Wandering At night and help admins manage their groups with My Commands! Have a look at the following for an idea of some of \
 the things I can help you with. Type /help to see my Functions.
 """
 
 HELP_STRINGS = """
-Hey there *{}*! My name is Tanjiro.
+Hey there! My Name is *{}*!
 I am an Anime themed group management bot.
 To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
 You can find my list of available commands with /help.
