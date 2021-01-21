@@ -279,7 +279,7 @@ def character(update, context):
         image = json.get('image', None)
         if image:
             image = image.get('large')
-            buttons = [[InlineKeyboardButton("Add To Favorite Character", callback_data=f"xanime_fvrtchar={char_name}")]]
+            buttons = [[InlineKeyboardButton("Add To Favorite Character📸", callback_data=f"xanime_fvrtchar={char_name}")]]
             update.effective_message.reply_photo(
                 photo=image,
                 caption=msg.replace('<b>', '</b>'),
@@ -334,7 +334,7 @@ def manga(update, context):
         msg = msg[:-2]
         info = json['siteUrl']
         buttons = [[InlineKeyboardButton("More Info", url=info)]]
-        buttons += [[InlineKeyboardButton("Add To Read List", callback_data=f"xanime_manga={title}")]]
+        buttons += [[InlineKeyboardButton("Add To Read List📖", callback_data=f"xanime_manga={title}")]]
         image = json.get("bannerImage", False)
         msg += f"_{json.get('description', None)}_"
         if image:
