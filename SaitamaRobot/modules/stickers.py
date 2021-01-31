@@ -458,6 +458,7 @@ __help__ = """
 • `/kang`*:* reply to a sticker to add it to your pack.
 • `/stickers`*:* Find stickers for given term on combot sticker catalogue
 • `/getsticker`*:* Reply to a sticker to me to upload its raw PNG file.
+• `/q`*:* Reply to a message to me to upload its quote.
 """
 
 __mod_name__ = "Stickers"
