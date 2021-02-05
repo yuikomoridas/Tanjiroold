@@ -1,5 +1,6 @@
 from typing import Optional
 import time
+import html
 
 from telegram import Message, User
 from telegram import MessageEntity, ParseMode
