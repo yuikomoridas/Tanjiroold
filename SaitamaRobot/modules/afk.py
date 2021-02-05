@@ -128,7 +128,7 @@ def check_afk(update, context, user_id, fst_name, userc_id):
             if int(userc_id) == int(user_id):
                 return
             res = "{} is AFK! Says it's because of: <code>{}</code>. Since: {}".format(
-                html.escape(fst_name), html.escape(user.reason), html.escape(since_afk)
+                html.escape(fst_name), html.escape(reason), html.escape(since_afk)
             )
             update.effective_message.reply_text(res)
 
