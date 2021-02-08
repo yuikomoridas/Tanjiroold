@@ -86,6 +86,8 @@ TRUTH = (
     "How old were you when you found out how babies are made?",
     "Have you ever chew gutka or paan masala if yes then tell when was the last time?",
     "If you could go on a date with any celebrity, who would it be?",
+    "Congratulations 🎉🎉, Don't do any truth this Time. Enjoy ;)",
+    "Have your ever lied that you never cheated on exam?",
 
 )
 
@@ -164,4 +166,21 @@ DARE = (
     "Tease your best friend",
     "Make a tatoo on your hand",
     "Say your Favourite Dialogue", 
+    "Send ss of your tachiyomi search history?",
+    "Give a screenshot of talking to the girl in What'sapp.?
+    "Send crush your ugliest photo?",
+    "Send message to your teacher",
+    "Confess ur crush then block her before getting reply",
+    "Send your browsing history to your crush",
+    "Flirt with a member of the group that is of the same sex as you.",
+    "Dance for one minute without any music. And Send that video",
+    "Dress as female and send screen shot in group",
+    "Send your call history",
+    "Send hi to your teacher",
+    "Send your photo in your current pose",
+    "Speak 'Mai nashedi hu bahut bada' in VC or Voice message",
+    "Send your photo in school GRP. Than delete it",
+    "Send your SS of Instagram dm",
+    "Congratulations 🎉🎉, Don't do any dare this Time. Now another person's Chance",
+    "Send your SS of last person that you have texted",
 )
