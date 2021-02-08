@@ -88,6 +88,7 @@ TRUTH = (
     "If you could go on a date with any celebrity, who would it be?",
     "Congratulations 🎉🎉, Don't do any truth this Time. Enjoy ;)",
     "Have your ever lied that you never cheated on exam?",
+
 )
 
 DARE = (
