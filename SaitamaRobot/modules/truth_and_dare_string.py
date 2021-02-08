@@ -183,4 +183,5 @@ DARE = (
     "Send your SS of Instagram dm",
     "Congratulations 🎉🎉, Don't do any dare this Time. Now another person's Chance",
     "Send your SS of last person that you have texted",
+
 )
