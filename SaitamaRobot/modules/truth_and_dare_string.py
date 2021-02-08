@@ -61,7 +61,32 @@ TRUTH = (
     "Do you like Black-Pink",
     "Who is your Favourite BTS",
     "Who is your Favourite Rock Band",
-  
+    "What was the last thing you searched for on your phone?",
+    "Have you ever got caught by cheating at exam hall?",
+    "Who do you hate the most?",
+    "How many kids do you want to have in the future?",
+    "Would you date someone shorter than you?",
+    "If someone paid you $1000 to wear your bra outside your shirt, would you do it?",
+    "Have you ever fapped if you've done then tell when you have done last time?",
+    "If your crush told you he liked your best friend, what would you do?",
+    "Would you ditch your friends if you could become the most popular girl in school?",
+    "Have you ever had a crush on a teacher? Who?",
+    "What's the most embarrassing thing you've ever done in front of a teacher?",
+    "Have you ever stuck gum under a desk?",
+    "Have u ever get caught during intimate scenes in anime?",
+    "Ever search hentai on YouTube?",
+    "Ever watched gay hentai?",
+    "Ever sent the link of hentai to ur teacher?",
+    "What's the worst class to have first period?",
+    "If you had to delete one app from your phone, which one would it be?",
+    "Have you ever peed on the side of the road?",
+    "What’s the dumbest thing you’ve done to impress a crush?",
+    "If you could get surgery to look like any celebrity, who would it be?",
+    "Have you ever pretended to like a gift you hated and what did you do with it?",
+    "How old were you when you found out how babies are made?",
+    "Have you ever chew gutka or paan masala if yes then tell when was the last time?",
+    "If you could go on a date with any celebrity, who would it be?",
+
 )
 
 DARE = (
