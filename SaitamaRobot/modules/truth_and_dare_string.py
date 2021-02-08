@@ -88,7 +88,6 @@ TRUTH = (
     "If you could go on a date with any celebrity, who would it be?",
     "Congratulations 🎉🎉, Don't do any truth this Time. Enjoy ;)",
     "Have your ever lied that you never cheated on exam?",
-
 )
 
 DARE = (
@@ -183,5 +182,4 @@ DARE = (
     "Send your SS of Instagram dm",
     "Congratulations 🎉🎉, Don't do any dare this Time. Now another person's Chance",
     "Send your SS of last person that you have texted",
-
 )
