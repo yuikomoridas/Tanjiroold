@@ -167,7 +167,7 @@ DARE = (
     "Make a tatoo on your hand",
     "Say your Favourite Dialogue", 
     "Send ss of your tachiyomi search history?",
-    "Give a screenshot of talking to the girl in What'sapp.?
+    "Give a screenshot of talking to the girl in Whatsapp?",
     "Send crush your ugliest photo?",
     "Send message to your teacher",
     "Confess ur crush then block her before getting reply",
