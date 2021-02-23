@@ -24,7 +24,7 @@ from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html
 from telegram.error import BadRequest
 
-from Shoko import (
+from SaitamaRobot import (
     dispatcher,
     OWNER_ID,
     SUDO_USERS,
