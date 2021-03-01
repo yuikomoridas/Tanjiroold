@@ -197,7 +197,8 @@ else:
     sw = spamwatch.Client(SPAMWATCH_API)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-telethn = TelegramClient("saitama", API_ID, API_HASH)
+oko = TelegramClient("TanjiroKamado", API_ID, API_HASH)
+telethn = TelegramClient("tanjiro", API_ID, API_HASH)
 pgram = Client("TanjiroPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 dispatcher = updater.dispatcher
 
