@@ -9,7 +9,7 @@ from telegram import (InlineKeyboardButton, InlineKeyboardMarkup, ParseMode,
 from telegram.ext import CallbackContext, run_async
 
 info_btn = "More Information"
-kaizoku_btn = "Kaizoku ☠️"
+animesearch_btn = "Search ☠️"
 prequel_btn = "⬅️ Prequel"
 sequel_btn = "Sequel ➡️"
 close_btn = "Close ❌"
