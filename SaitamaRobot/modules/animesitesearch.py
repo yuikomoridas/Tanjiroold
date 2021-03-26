@@ -66,7 +66,8 @@ def site_search(update: Update, context: CallbackContext, site: str):
             post_link = entry.a['href']
             post_name = html.escape(entry.text.strip())
             result += f"• <a href='{post_link}'>{post_name}</a>\n"
-            
+      
+      
     elif site == "aat":
         search_url = f"https://animeacademy.in/?s={search_query}"
         html_text = requests.get(search_url).text
@@ -84,7 +85,20 @@ def site_search(update: Update, context: CallbackContext, site: str):
            post_link = entry.a['href']
            post_name = html.escape(entry.text.strip())
            result += f"• <a href='{post_link}'>{post_name}</a>\n"
-           
+
+      if site == "animesearch":
+        search_url = f"https://Gogoanime-API.darkpokefan1.repl.co/search/?s={search_query}"
+        html_text = requests.get(search_url).text
+        soup = bs4.BeautifulSoup(html_text, "html.parser")
+        search_result = soup.find_all("h2", {'class': "post-title"})
+
+        if search_result:
+            result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKaizoku</code>: \n"
+            for entry in search_result:
+                post_link = "https://Gogoanime-API.darkpokefan1.repl.co/search/" + entry.a['href']
+                post_name = html.escape(entry.text)
+                result += f"• <a href='{post_link}'>{post_name}</a>\n"  
+   
     elif site == "hsa":
         search_url = f"https://www.hindianime.net/search?q={search_query}"
         html_text = requests.get(search_url).text
@@ -196,7 +210,11 @@ def kaizoku(update: Update, context: CallbackContext):
 @run_async
 def kayo(update: Update, context: CallbackContext):
     site_search(update, context, "kayo")
-    
+ @run_async
+def animesearch(update: Update, context: CallbackContext):
+    site_search(update, context, "animesearch")
+ 
+
 @run_async
 def aat(update: Update, context: CallbackContext):
     site_search(update, context, "aat")
@@ -221,7 +239,7 @@ def an(update: Update, context: CallbackContext):
 def cat(update: Update, context: CallbackContext):
     site_search(update, context, "cat")
     
-
+ANIMESEARCH_SEARCH_HANDLER = DisableAbleCommandHandler("animesearch", animesearch)
 KAIZOKU_SEARCH_HANDLER = DisableAbleCommandHandler("kaizoku", kaizoku)
 KAYO_SEARCH_HANDLER = DisableAbleCommandHandler("kayo", kayo)
 AAT_SEARCH_HANDLER = DisableAbleCommandHandler("aat", aat)
@@ -231,6 +249,7 @@ ATF_SEARCH_HANDLER = DisableAbleCommandHandler("atf", atf)
 AN_SEARCH_HANDLER = DisableAbleCommandHandler("an", an)
 CAT_SEARCH_HANDLER = DisableAbleCommandHandler("cat", cat)
 
+dispatcher.add_handler(ANIMESEARCH_SEARCH_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(AAT_SEARCH_HANDLER)
@@ -241,4 +260,4 @@ dispatcher.add_handler(AN_SEARCH_HANDLER)
 dispatcher.add_handler(CAT_SEARCH_HANDLER)
 
 __handlers__ = [ KAIZOKU_SEARCH_HANDLER, KAYO_SEARCH_HANDLER, AAT_SEARCH_HANDLER,  HSA_SEARCH_HANDLER,  
-                 AST_SEARCH_HANDLER,  ATF_SEARCH_HANDLER, AN_SEARCH_HANDLER, CAT_SEARCH_HANDLER]
+                 AST_SEARCH_HANDLER,  ATF_SEARCH_HANDLER, AN_SEARCH_HANDLER, CAT_SEARCH_HANDLER, ANIMESEARCH_SEARCH_HANDLER]
