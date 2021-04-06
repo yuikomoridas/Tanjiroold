@@ -3,7 +3,7 @@ from telegram import ParseMode, Update
 from telegram.ext import CallbackContext, run_async
 
 from SaitamaRobot import dispatcher
-from SaitamaRoboot.modules.disable import DisableAbleCommandHandler
+from SaitamaRobot.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
