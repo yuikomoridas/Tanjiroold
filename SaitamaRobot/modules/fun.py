@@ -30,6 +30,30 @@ def sanitize(update: Update, context: CallbackContext):
     reply_animation = message.reply_to_message.reply_animation if message.reply_to_message else message.reply_animation
     reply_animation(GIF_ID, caption=f'*Sanitizes {name}*')
 
+@run_async
+@typing_action
+def shout(update, context):
+    args = context.args
+    message = update.effective_message
+
+    if message.reply_to_message:
+        data = message.reply_to_message.text
+    elif args:
+        data = " ".join(args)
+    else:
+        data = "I need a message to meme"
+
+    msg = "```"
+    result = []
+    result.append(" ".join([s for s in data]))
+    for pos, symbol in enumerate(data[1:]):
+        result.append(symbol + " " + "  " * pos + symbol)
+    result = list("\n".join(result))
+    result[0] = data[0]
+    result = "".join(result)
+    msg = "```\n" + result + "```"
+    return update.effective_message.reply_text(msg, parse_mode="MARKDOWN")
+
 
 @run_async
 def sanitize(update: Update, context: CallbackContext):
