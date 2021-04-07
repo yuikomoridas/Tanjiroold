@@ -1,8 +1,13 @@
 import bs4
 import requests
+import asyncio
+import os
 import re
+import subprocess
+import time
+from datetime import datetime
 from SaitamaRobot.events import register
-from SaitamaRobot import telethn
+from SaitamaRobot import LOGGER, client
 from telethon import types
 from telethon.tl import functions
 
@@ -12,25 +17,26 @@ async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
         return isinstance(
-            (await telethn(functions.channels.GetParticipantRequest(chat, user))).participant,
+            (await client(functions.channels.GetParticipantRequest(chat, user))).participant,
             (types.ChannelParticipantAdmin, types.ChannelParticipantCreator)
         )
-    if isinstance(chat, types.InputPeerChat):
+    elif isinstance(chat, types.InputPeerChat):
 
-        ui = await telethn.get_peer_id(user)
-        ps = (await telethn(functions.messages.GetFullChatRequest(chat.chat_id))) \
-                .full_chat.participants.participants
+        ui = await client.get_peer_id(user)
+        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id))) \
+            .full_chat.participants.participants
         return isinstance(
             next((p for p in ps if p.user_id == ui), None),
             (types.ChatParticipantAdmin, types.ChatParticipantCreator)
         )
-    return None
+    else:
+        return None
 
 @register(pattern="^/imdb (.*)") 
 async def imdb(e):
  if e.is_group:
   if not (await is_register_admin(e.input_chat, e.message.sender_id)):
-     await event.reply(" You are not admin. You can't use this command.. But you can use in my pm")
+     await event.reply("😜 Heya,You are not admin or mod 🥺.So you can't do this command in this chat 😅.But you can use me in pm😁")
      return
  try:
     movie_name = e.pattern_match.group(1)
