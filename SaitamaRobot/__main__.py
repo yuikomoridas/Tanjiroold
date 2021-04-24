@@ -63,9 +63,9 @@ Hey there! My Name is *{}*!
 I am an Anime themed group management bot.
 To add me to your group click ["HERE"](t.me/TanjiroKamadoRobot?startgroup=botstart)
 You can find my list of available commands with /help.
-[Tanjiro's Repo](github.com/JayPatel1314/Tanjiro-Kamado) 
+[Tanjiro's Repo](github.com/JayPatel1314/Tanjiroold) 
 See [Basic Configuration Checklist](t.me/OnePunchUpdates/29) on how to secure your group.
-If any Questions Regarding Tanjiro Then Join [Tanjiro Support](https://t.me/TanjiroKamadoSupport).
+If any Questions Regarding Tanjiro Then Join [Tanjiro Support](https://t.me/TanjiroBotSupport).
 This bot is Forked From [Saitama Robot](https://t.me/SaitamaRobot).
 
 *Main* commands available:
@@ -213,7 +213,7 @@ def start(update: Update, context: CallbackContext):
                      [
                          InlineKeyboardButton(
                              text="👀Support Group",
-                             url=f"https://t.me/TanjiroSupportChat"),
+                             url=f"https://t.me/TanjiroBotSupport"),
                          InlineKeyboardButton(
                              text="📃Updates Channel📃",
                              url="https://t.me/TanjiroBoTUpdates")
@@ -221,12 +221,12 @@ def start(update: Update, context: CallbackContext):
                      [
                          InlineKeyboardButton(
                              text="💬Getting Started Guide💬",
-                             url="https://t.me/TanjiroBoTUpdates/6")
+                             url="https://t.me/BotLabUpdates/3")
                      ],
                      [
                          InlineKeyboardButton(
                              text="📸 Source Code.",
-                             url="https://github.com/JayPatel1314/Tanjiro-Kamado")
+                             url="https://github.com/JayPatel1314/Tanjiro")
                      ]]))
     else:
         update.effective_message.reply_text(
